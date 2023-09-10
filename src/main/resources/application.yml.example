@@ -1,0 +1,106 @@
+# general settings
+spring:
+  main:
+    web-application-type: none
+  profiles:
+    active: prod
+##
+## PROD
+##
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+# logging
+logging:
+  level:
+    root: INFO
+    de:
+      quai: INFO
+    com:
+      github:
+        twitch4j: INFO
+
+# credentials and tokens
+credentials:
+  irc: 'oauth:<token>'
+api:
+  twitch_client_id: '<client-id>'
+  twitch_client_secret: '<client-secret>'
+
+# event handler
+events4j:
+  handler:
+    spring:
+      enabled: 'true'
+
+# discord
+discord:
+  webhook: '<webhook-url>'
+
+# regex mentions
+mentions:
+  words:
+    - quai
+
+
+# twitch
+twitch:
+  username: 'quai'
+  language: 'de'
+  mentions: true
+  channels:
+    - channelname-that-you-dont-follow
+
+##
+## DEV
+##
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+# logging
+logging:
+  level:
+    root: INFO
+    de:
+      quai: INFO
+    com:
+      github:
+        twitch4j: INFO
+
+# credentials and tokens
+credentials:
+  irc: 'oauth:<token>'
+api:
+  twitch_client_id: '<client-id>'
+  twitch_client_secret: '<client-secret>'
+
+# event handler
+events4j:
+  handler:
+    spring:
+      enabled: 'true'
+
+# discord
+discord:
+  webhook: '<webbhook-url>'
+
+# regex mentions
+mentions:
+  words:
+    - quai
+
+
+
+# twitch
+twitch:
+  username: 'quai'
+  language: 'de'
+  mentions: true
+  channels:
+    - channelname-that-you-dont-follow

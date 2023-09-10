@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  twitch-mentions-discord:
+    build: .
+    restart: always
+    volumes:
+      - ./config:/config/:ro
+      - ./logs:/logs
+    # Configuring the environment variable
+    environment:
+      - CONFIG_LOCATION=file:/config/
